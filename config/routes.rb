@@ -5,5 +5,11 @@ Rails.application.routes.draw do
       get  '/contact', to: 'static_pages#contact'
       get  '/signup',  to: 'users#new'
       resources :users 
+<<<<<<< HEAD
       resources :microposts, only: [:create, :destroy] 
+=======
+            get    '/login',   to: 'sessions#new'
+      post   '/login',   to: 'sessions#create'
+      delete '/logout',  to: 'sessions#destroy'
+>>>>>>> upstream/master
 end
